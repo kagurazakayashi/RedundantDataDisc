@@ -61,7 +61,7 @@ func main() {
 				break
 			}
 			destFile := filepath.Join(folderName, filepath.Base(file))
-			println(destFile)
+			copyFile(file, destFile)
 		}
 
 		folderIndex++
