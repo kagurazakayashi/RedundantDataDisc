@@ -44,4 +44,6 @@ func copyFile(src, dst string) {
 	if verbose {
 		fmt.Println("复制:", src, "->", dst)
 	}
+
+	showProgress()
 }

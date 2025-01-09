@@ -34,3 +34,18 @@ func parseSize(sizeStr string) int64 {
 	}
 	return 0
 }
+
+// 顯示進度條
+func showProgress() {
+	progress := float64(currentSize) / float64(isoSize) * 100
+	barLength := int(progress / 2)
+	remaining := 50 - barLength
+
+	fmt.Printf("\r进度: [%s%s] %.2f%% (%d / %d MB)",
+		strings.Repeat("#", barLength),
+		strings.Repeat("-", remaining),
+		progress,
+		currentSize/1024/1024,
+		isoSize/1024/1024,
+	)
+}
