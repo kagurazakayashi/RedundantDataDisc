@@ -1,6 +1,5 @@
 *.xz
 *.tmp.*
-*.txt
 testdata
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,go,goland,compressed

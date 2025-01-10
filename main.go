@@ -65,6 +65,17 @@ func main() {
 		}
 
 		folderIndex++
+		showProgress()
 	}
+
+	fmt.Println("\n填充完成，创建 ISO 文件...")
+
+	// 生成 ISO
+	createISO()
+
+	// 刪除臨時目錄
+	os.RemoveAll(tempDir)
+
+	fmt.Println("ISO 文件已生成:", isoName)
 
 }
